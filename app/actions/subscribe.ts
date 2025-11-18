@@ -6,13 +6,6 @@ const subscribeSchema = z.object({
   firstName: z.string().min(2, "Il nome deve avere almeno 2 caratteri"),
   lastName: z.string().min(2, "Il cognome deve avere almeno 2 caratteri"),
   email: z.string().email("Inserisci un indirizzo email valido"),
-  phone: z
-    .string()
-    .min(8, "Inserisci un numero di telefono valido")
-    .regex(
-      /^\+[1-9]\d{6,14}$/,
-      "Formato non valido. Assicurati di inserire solo le cifre del numero."
-    ),
   birthday: z.string().min(1, "Inserisci la data di nascita"),
   // Honeypot field - should be empty
   website: z.string().max(0, "Bot detected"),
@@ -33,7 +26,6 @@ export async function subscribeAction(
       firstName: formData.get("firstName") as string,
       lastName: formData.get("lastName") as string,
       email: formData.get("email") as string,
-      phone: formData.get("phone") as string,
       birthday: formData.get("birthday") as string,
       website: (formData.get("website") as string) || "", // Honeypot
     };
@@ -81,7 +73,6 @@ export async function subscribeAction(
         attributes: {
           FIRSTNAME: rawData.firstName,
           LASTNAME: rawData.lastName,
-          SMS: rawData.phone,
           BIRTHDAY: rawData.birthday,
         },
         listIds: process.env.BREVO_LIST_ID
@@ -102,23 +93,6 @@ export async function subscribeAction(
         return {
           success: true,
           message: "Grazie! Sei già registrato nella nostra lista.",
-        };
-      }
-
-      // Handle invalid phone number from Brevo
-      if (
-        brevoResponse.status === 400 &&
-        errorData.code === "invalid_parameter" &&
-        errorData.message?.toLowerCase().includes("phone")
-      ) {
-        return {
-          success: false,
-          message: "Correggi gli errori nel modulo",
-          errors: {
-            phone: [
-              "Numero di telefono non valido. Verifica il prefisso e le cifre inserite.",
-            ],
-          },
         };
       }
 

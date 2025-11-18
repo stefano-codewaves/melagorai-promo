@@ -8,9 +8,6 @@ import logo from "@/public/melagorai-logo.svg";
 import backgroundImage from "@/public/melagorai-bg-2.jpeg";
 import productImage from "@/public/melagorai-product-image.png";
 
-// Components
-import { PhoneInput } from "./PhoneInput";
-
 // Types
 import { type SubscribeState } from "../actions/subscribe";
 
@@ -26,7 +23,7 @@ export function RegistrationForm({
   isPending,
 }: RegistrationFormProps) {
   return (
-    <main className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
+    <main className="min-h-dvh flex items-center justify-center p-4 relative overflow-hidden">
       <Image
         src={backgroundImage}
         alt=""
@@ -89,7 +86,7 @@ export function RegistrationForm({
                   id="firstName"
                   name="firstName"
                   required
-                  className="w-full px-3 py-2 rounded-lg border border-gray-300  text-secondary placeholder-gray-400 text-sm"
+                  className="w-full px-3 py-2 rounded-lg border border-gray-300 text-secondary placeholder-gray-400 text-sm"
                   placeholder="Mario"
                 />
                 {state?.errors?.firstName && (
@@ -110,7 +107,7 @@ export function RegistrationForm({
                   id="lastName"
                   name="lastName"
                   required
-                  className="w-full px-3 py-2 rounded-lg border border-gray-300  text-secondary placeholder-gray-400 text-sm"
+                  className="w-full px-3 py-2 rounded-lg border border-gray-300 text-secondary placeholder-gray-400 text-sm"
                   placeholder="Rossi"
                 />
                 {state?.errors?.lastName && (
@@ -133,7 +130,7 @@ export function RegistrationForm({
                 id="email"
                 name="email"
                 required
-                className="w-full px-3 py-2 rounded-lg border border-gray-300  text-secondary placeholder-gray-400 text-sm"
+                className="w-full px-3 py-2 rounded-lg border border-gray-300 text-secondary placeholder-gray-400 text-sm"
                 placeholder="la.tua@email.it"
               />
               {state?.errors?.email && (
@@ -142,7 +139,6 @@ export function RegistrationForm({
                 </p>
               )}
             </div>
-            <PhoneInput error={state?.errors?.phone?.[0]} />
 
             <div>
               <label

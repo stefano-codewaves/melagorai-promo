@@ -10,7 +10,7 @@ interface ThankYouProps {
 
 export function ThankYou({ message }: ThankYouProps) {
   return (
-    <main className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
+    <main className="min-h-dvh flex items-center justify-center p-4 relative overflow-hidden">
       <Image
         src={backgroundImage}
         alt=""
