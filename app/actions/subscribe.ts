@@ -60,7 +60,6 @@ export async function subscribeAction(
       };
     }
 
-    // Submit to Brevo
     const brevoResponse = await fetch("https://api.brevo.com/v3/contacts", {
       method: "POST",
       headers: {
