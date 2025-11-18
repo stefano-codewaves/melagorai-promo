@@ -6,6 +6,7 @@ import { ThankYou } from "./components/ThankYou";
 import { RegistrationForm } from "./components/RegistrationForm";
 
 export default function Home() {
+  console.log("test");
   const [state, formAction, isPending] = useActionState<
     SubscribeState | null,
     FormData
