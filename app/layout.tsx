@@ -13,6 +13,13 @@ export const metadata: Metadata = {
   description: "Registrati e ottieni il 10% di sconto sul tuo primo ordine di prodotti Melagorai",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
