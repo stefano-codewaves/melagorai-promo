@@ -10,7 +10,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Melagorai - Registrati per il tuo sconto",
-  description: "Registrati e ottieni il 10% di sconto sul tuo primo ordine di prodotti Melagorai",
+  description:
+    "Registrati e ottieni il 10% di sconto sul tuo primo ordine di prodotti Melagorai",
 };
 
 export const viewport = {
@@ -18,6 +19,7 @@ export const viewport = {
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
+  themeColor: "#466728",
 };
 
 export default function RootLayout({
@@ -27,9 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it">
-      <body className={`${poppins.variable} antialiased`}>
-        {children}
-      </body>
+      <body className={`${poppins.variable} antialiased`}>{children}</body>
     </html>
   );
 }
