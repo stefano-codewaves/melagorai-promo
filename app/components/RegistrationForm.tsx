@@ -45,18 +45,17 @@ export function RegistrationForm({
             />
           </div>
           <div className="relative mb-8">
-            <div className="bg-linear-to-r from-primary to-primary-dark text-white rounded-xl p-4 text-center shadow-lg relative overflow-hidden">
+            <div className="bg-linear-to-r from-primary to-primary-dark text-white rounded-xl p-5 text-center shadow-lg relative overflow-hidden">
               <div className="absolute inset-0 bg-white/10 transform -skew-x-12" />
-              <p className="text-xs font-semibold tracking-wider mb-1 relative">
-                OFFERTA ESCLUSIVA
-              </p>
-              <p className="text-4xl font-bold relative">10%</p>
-              <p className="text-sm mt-1 relative">
-                di sconto sul primo ordine
+
+              <p className="text-sm relative leading-snug text-balance">
+                Iscriviti alla newsletter e ottieni subito uno sconto del{" "}
+                <span className="font-bold">10%</span> sul tuo prossimo ordine,
+                senza minimo di spesa.
               </p>
             </div>
 
-            <div className="absolute -top-[24px] -right-[8px] w-20 h-20 drop-shadow-lg animate-slide-in-right">
+            <div className="absolute -top-[26px] sm:-top-[44px] -right-[8px] w-14 h-14 sm:w-20 sm:h-20 drop-shadow-lg animate-slide-in-right">
               <Image
                 src={productImage}
                 alt="Prodotti Melagorai"
