@@ -23,7 +23,7 @@ export function ThankYou({ message }: ThankYouProps) {
 
       <div className="relative z-10 w-full max-w-md animate-fade-in-up">
         <div className="backdrop-blur-sm bg-white/95 rounded-2xl shadow-2xl p-5 md:p-6 border border-white/20">
-          <div className="flex justify-center mb-4">
+          <div className="flex justify-center mb-6">
             <Image
               src={logo}
               alt="Melagorai logo"
