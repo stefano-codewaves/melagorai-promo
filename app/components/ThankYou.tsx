@@ -21,7 +21,7 @@ export function ThankYou({ message }: ThankYouProps) {
         quality={85}
       />
 
-      <div className="relative z-10 w-full max-w-md">
+      <div className="relative z-10 w-full max-w-md animate-fade-in-up">
         <div className="backdrop-blur-sm bg-white/95 rounded-2xl shadow-2xl p-5 md:p-6 border border-white/20">
           <div className="flex justify-center mb-4">
             <Image
@@ -33,7 +33,7 @@ export function ThankYou({ message }: ThankYouProps) {
             />
           </div>
 
-          <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 animate-scale-in">
             <svg
               className="w-8 h-8 text-primary"
               fill="none"

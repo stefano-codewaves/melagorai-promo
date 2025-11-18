@@ -36,7 +36,7 @@ export function RegistrationForm({
         priority
         quality={85}
       />
-      <div className="relative z-10 w-full max-w-md">
+      <div className="relative z-10 w-full max-w-md animate-fade-in-up">
         <div className="backdrop-blur-sm bg-white/95 rounded-2xl shadow-2xl p-5 md:p-6 border border-white/20">
           <div className="flex justify-center mb-4">
             <Image
@@ -59,7 +59,7 @@ export function RegistrationForm({
               </p>
             </div>
 
-            <div className="absolute -top-[24px] -right-[8px] rotate-6 w-20 h-20 drop-shadow-lg">
+            <div className="absolute -top-[24px] -right-[8px] w-20 h-20 drop-shadow-lg animate-slide-in-right">
               <Image
                 src={productImage}
                 alt="Prodotti Melagorai"
