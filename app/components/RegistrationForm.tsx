@@ -173,7 +173,7 @@ export function RegistrationForm({
             <button
               type="submit"
               disabled={isPending}
-              className="w-full py-3 px-6 bg-primary hover:bg-primary-dark text-white font-semibold rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl hover:scale-[1.02] mt-4"
+              className="w-full py-3 px-6 bg-primary hover:bg-primary-dark text-white font-semibold rounded-full transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl hover:scale-[1.02] mt-4"
             >
               {isPending ? (
                 <span className="flex items-center justify-center">
